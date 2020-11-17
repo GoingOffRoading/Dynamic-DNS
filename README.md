@@ -8,5 +8,29 @@ Relevant Documentation:
 ### Synthetic Records: https://support.google.com/domains/answer/6069273
 
 
-How to use:
+Example applitcation with Kubernetes:
 
+
+
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: MYDOMAIN
+spec:
+  schedule: "*/15 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: MYDOMAIN
+            image: THIS-CONTAINER
+          restartPolicy: Never
+          env:
+            - name: username
+              value: "YOUR_USERNAME_HERE"
+            - name: password
+              value: "YOUR_PASSWORD_HERE"
+            - name: domain
+              value: "YOUR_DOMAIN_HERE"

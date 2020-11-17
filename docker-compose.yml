@@ -1,1 +1,10 @@
-TBD
+---
+version: '3'
+services:
+ torrent:
+  container_name: google-dns-$hostname$
+  image: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  environment:
+   - USERNAME=$username$
+   - PASSWORD=$password$
+   - HOSTNAME=$hostname$

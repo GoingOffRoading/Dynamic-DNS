@@ -1,8 +1,9 @@
-    ---
+---
     apiVersion: batch/v1beta1
     kind: CronJob
     metadata:
     name: MYDOMAIN
+    nameSpace: default
     spec:
     schedule: "*/15 * * * *"
     jobTemplate:

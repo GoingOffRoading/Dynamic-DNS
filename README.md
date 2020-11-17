@@ -12,25 +12,25 @@ Example applitcation with Kubernetes:
 
 
 
----
-apiVersion: batch/v1beta1
-kind: CronJob
-metadata:
-  name: MYDOMAIN
-spec:
-  schedule: "*/15 * * * *"
-  jobTemplate:
+    ---
+    apiVersion: batch/v1beta1
+    kind: CronJob
+    metadata:
+    name: MYDOMAIN
     spec:
-      template:
+    schedule: "*/15 * * * *"
+    jobTemplate:
         spec:
-          containers:
-          - name: MYDOMAIN
-            image: THIS-CONTAINER
-          restartPolicy: Never
-          env:
-            - name: username
-              value: "YOUR_USERNAME_HERE"
-            - name: password
-              value: "YOUR_PASSWORD_HERE"
-            - name: domain
-              value: "YOUR_DOMAIN_HERE"
+        template:
+            spec:
+            containers:
+            - name: MYDOMAIN
+                image: THIS-CONTAINER
+            restartPolicy: Never
+            env:
+                - name: username
+                value: "YOUR_USERNAME_HERE"
+                - name: password
+                value: "YOUR_PASSWORD_HERE"
+                - name: domain
+                value: "YOUR_DOMAIN_HERE"

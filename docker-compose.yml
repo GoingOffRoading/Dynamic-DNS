@@ -3,7 +3,7 @@ version: '3'
 services:
  torrent:
   container_name: google-dns-$hostname$
-  image: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  image: goingoffroading/google_domains_dynamic_dns_updater
   environment:
    - USERNAME=$username$
    - PASSWORD=$password$

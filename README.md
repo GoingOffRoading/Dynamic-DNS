@@ -11,3 +11,6 @@ Relevant Documentation:
 
 
     docker run -d -e USERNAME=$username$ PASSWORD=$password$ HOSTNAME=$hostname$ --name DNS DNS:1.0
+
+
+    u

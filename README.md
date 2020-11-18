@@ -2,6 +2,8 @@
 
 [Google Domains](https://domains.google/) offers a reasonably cheap/flexible DynamicDNS solution for registering domains and subdomains for your projects.  The only catch is that there are no automated solutions to update your dyanmic IP address when your IP changes back to your Google Domains DNS record.  Enter **Google-Domains-Dynamic-DNS**: a terrible name but a convienient way to update your DynamicDNS Google record.
 
+Small Edit: A friendly redditor linked me to [qmcgaw/ddns-updater](https://hub.docker.com/r/qmcgaw/ddns-updater/).  Friendly alternative to this image.
+
 To use this image, you will need the following from your Dynamic DNS record:
 
 * Username

@@ -2,7 +2,7 @@
     apiVersion: batch/v1beta1
     kind: CronJob
     metadata:
-    name: googledns
+    name: dynamicDNS
     nameSpace: default
     spec:
     schedule: "*/15 * * * *"
@@ -11,13 +11,11 @@
         template:
             spec:
             containers:
-            - name: googledns
+            - name: dynamicDNS
                 image: goingoffroading/google_domains_dynamic_dns_updater
             restartPolicy: Never
-            env:
-                - name: USERNAME
-                value: "$Username$"
-                - name: PASSWORD
-                value: "$Password$"
-                - name: HOSTNAME
-                value: "$Hostname$"
+      volumes:
+      - name: dynamicDNS
+        nfs:
+          server: xxx.xxx.xxx.xxx
+          path: "/dynamicDNS"

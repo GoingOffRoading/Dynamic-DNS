@@ -1,3 +1,3 @@
 #!/bin/sh
 
-for each in websites/*.sh ; do bash $each ; done
+for each in jobs/*.sh ; do bash $each ; done
